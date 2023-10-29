@@ -34,30 +34,6 @@ export const Toolbar = () => {
             </div>
             <div>
               <Button
-                title={t('toolbar.menu.about')}
-                startIcon={<InfoOutlinedIcon />}
-                color='inherit'
-                onClick={() => history.push('/about-planning-poker')}
-              >
-                {!isSmallScreen ? t('toolbar.menu.about') : null}
-              </Button>
-              <Button
-                title={t('toolbar.menu.guide')}
-                startIcon={<SearchOutlinedIcon />}
-                color='inherit'
-                onClick={() => history.push('/guide')}
-              >
-                {!isSmallScreen ? t('toolbar.menu.guide') : null}
-              </Button>
-              <Button
-                title={t('toolbar.menu.examples')}
-                startIcon={<BookOutlinedIcon />}
-                color='inherit'
-                onClick={() => history.push('/examples')}
-              >
-                {!isSmallScreen ? t('toolbar.menu.examples') : null}
-              </Button>
-              <Button
                 title={t('toolbar.menu.newSession')}
                 startIcon={<AddCircleOutlineIcon />}
                 color='inherit'
