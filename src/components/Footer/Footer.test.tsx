@@ -24,12 +24,22 @@ describe('Footer component', () => {
   });
   it('should render copyright', () => {
     render(<Footer />);
-    const element = screen.getByText('hellomuthu23');
+    const element = screen.getByText('Scrum Poker');
     expect(element).toBeInTheDocument();
   });
-  it('should render feedback', () => {
+  it('should render Product', () => {
     render(<Footer />);
-    const element = screen.getByText('Feedback: hellomuthu23@gmail.com');
+    const element = screen.getByText('Product');
+    expect(element).toBeInTheDocument();
+  });
+  it('should render Connect', () => {
+    render(<Footer />);
+    const element = screen.getByText('Connect');
+    expect(element).toBeInTheDocument();
+  });
+  it('should render Legal', () => {
+    render(<Footer />);
+    const element = screen.getByText('Legal');
     expect(element).toBeInTheDocument();
   });
   it('should show link to submit issue', () => {

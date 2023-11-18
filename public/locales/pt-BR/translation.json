@@ -7,7 +7,7 @@
   },
   "HomePage": {
     "heroSection": {
-      "title": "Scrum Bro",
+      "title": "Scrum Poker",
       "description": "Sistema de Planning Poker para estimativa de histórias dos usuários para seu time ágil/scrum. Crie uma sessão e convide membros do seu time para estimar as histórias com eficiência.",
       "formNewSession": {
         "newSessionHeader": "Criar nova sessão",

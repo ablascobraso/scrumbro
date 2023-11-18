@@ -99,11 +99,11 @@ describe('CardPicker component', () => {
     userEvent.click(cardValueElement[0]);
     expect(updatePlayerValueSpy).toHaveBeenCalledTimes(0);
   });
-  it('should display Click on the card to vote when game is not finished', () => {
+  it('should display Pick your card! when game is not finished', () => {
     const currentPlayerId = mockPlayers[0].id;
 
     render(<CardPicker game={mockGame} players={mockPlayers} currentPlayerId={currentPlayerId} />);
-    const helperText = screen.getByText('Click on the card to vote');
+    const helperText = screen.getByText('Pick your card!');
 
     expect(helperText).toBeInTheDocument();
   });
@@ -114,7 +114,7 @@ describe('CardPicker component', () => {
       gameStatus: Status.Finished,
     };
     render(<CardPicker game={finishedGameMock} players={mockPlayers} currentPlayerId={currentPlayerId} />);
-    const helperText = screen.getByText('Session not ready for Voting! Wait for moderator to start');
+    const helperText = screen.getByText('Estimation completed! Waiting for moderator to start a new voting...');
 
     expect(helperText).toBeInTheDocument();
   });

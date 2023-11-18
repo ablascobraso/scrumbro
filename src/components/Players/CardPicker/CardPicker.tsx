@@ -78,8 +78,8 @@ export const CardPicker: React.FC<CardPickerProps> = ({ game, players, currentPl
         </div>
         <Typography variant='h6'>
           {game.gameStatus !== Status.Finished
-            ? 'Click on the card to vote'
-            : 'Session not ready for Voting! Wait for moderator to start'}
+            ? 'Pick your card!'
+            : 'Estimation completed! Waiting for moderator to start a new voting...'}
         </Typography>
         <GoogleAd />
       </div>

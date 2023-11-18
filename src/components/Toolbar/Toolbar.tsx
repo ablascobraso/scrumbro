@@ -49,16 +49,6 @@ export const Toolbar = () => {
               >
                 {!isSmallScreen ? t('toolbar.menu.joinSession') : null}
               </Button>
-
-              <Button
-                id='github-button'
-                color='inherit'
-                onClick={() =>
-                  (window.location.href = 'https://github.com/hellomuthu23/planning-poker')
-                }
-              >
-                <GithubIcon></GithubIcon>
-              </Button>
               {!isSmallScreen && <LanguageControl />}
             </div>
           </div>

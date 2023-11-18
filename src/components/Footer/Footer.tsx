@@ -13,23 +13,37 @@ export const Footer = () => {
             <div className='FooterItemContainer'>
               <CopyrightIcon color='secondary' fontSize='small' />
               <Typography color='textSecondary' variant='body2'>
-                hellomuthu23
+                Scrum Poker
               </Typography>
             </div>
 
             <Divider orientation='vertical' flexItem></Divider>
             <div className='FooterItemContainer'>
               <Typography color='textSecondary' variant='body2'>
-                Feedback: hellomuthu23@gmail.com
+                Product
               </Typography>
             </div>
 
             <Divider orientation='vertical' flexItem></Divider>
-            <Link href='https://github.com/hellomuthu23/planning-poker/issues'>Submit an Issue</Link>
+            <div className='FooterItemContainer'>
+              <Typography color='textSecondary' variant='body2'>
+                Connect
+              </Typography>
+            </div>
+
             <Divider orientation='vertical' flexItem></Divider>
             <div className='FooterItemContainer'>
               <Typography color='textSecondary' variant='body2'>
-                <a href='https://www.buymeacoffee.com/hellomuthu23' target='_blank' rel='noreferrer'>
+                Legal
+              </Typography>
+            </div>
+
+            <Divider orientation='vertical' flexItem></Divider>
+            <Link href='https://github.com/ablascobraso/scrumbro'>Submit an Issue</Link>
+            <Divider orientation='vertical' flexItem></Divider>
+            <div className='FooterItemContainer'>
+              <Typography color='textSecondary' variant='body2'>
+                <a href='https://www.buymeacoffee.com/scrumbro' target='_blank' rel='noreferrer'>
                   <img
                     src='https://cdn.buymeacoffee.com/buttons/v2/default-blue.png'
                     alt='Buy Me A Coffee'
