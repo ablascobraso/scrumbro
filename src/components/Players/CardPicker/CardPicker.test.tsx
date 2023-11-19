@@ -11,6 +11,9 @@ import { getCards } from './CardConfigs';
 import { CardPicker } from './CardPicker';
 import * as cardConfigs from './CardConfigs';
 
+jest.mock('react-confetti', () => {
+  return () => <div data-testid="mock-confetti" />;
+});
 jest.mock('../../../service/players');
 describe('CardPicker component', () => {
   const mockGame: Game = {
@@ -94,7 +97,13 @@ describe('CardPicker component', () => {
       ...mockGame,
       gameStatus: Status.Finished,
     };
-    render(<CardPicker game={finishedGameMock} players={mockPlayers} currentPlayerId={currentPlayerId} />);
+    render(
+      <CardPicker
+        game={finishedGameMock}
+        players={mockPlayers}
+        currentPlayerId={currentPlayerId}
+      />
+    );
     const cardValueElement = screen.queryAllByText(5);
     userEvent.click(cardValueElement[0]);
     expect(updatePlayerValueSpy).toHaveBeenCalledTimes(0);
