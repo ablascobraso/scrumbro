@@ -81,7 +81,7 @@ export const CardPicker: React.FC<CardPickerProps> = ({ game, players, currentPl
             ? 'Pick your card!'
             : 'Estimation completed! Waiting for moderator to start a new voting...'}
         </Typography>
-        {game.gameStatus == Status.Finished && (<Confetti recycle={false}/>)}
+        {game.gameStatus === Status.Finished && (<Confetti recycle={false}/>)}
       </div>
     </Grow>
   );

@@ -1,0 +1,19 @@
+{
+  "toolbar": {
+    "menu": {
+      "newSession": "Nouvelle session",
+      "joinSession": "Rejoindre une session"
+    }
+  },
+  "HomePage": {
+    "heroSection": {
+      "title": "Scrum Poker",
+      "description": "Planning Poker dédié à l'estimation de user stories des équipes agiles/scrum. Créez una nouvelle session et invitez vos collègues pour commencer l'estimation.",
+      "formNewSession": {
+        "newSessionHeader": "Créer une nouvelle session",
+        "sessionNameLabel": "Nom de la session",
+        "yourNameLabel": "Votre nom"
+      }
+    }
+  }
+}

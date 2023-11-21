@@ -33,6 +33,8 @@ export const LanguageControl: React.FC = () => {
         <MenuItem value={'en-US'}>{getUnicodeFlagIcon('US')}</MenuItem>
         <MenuItem value={'pt-BR'}>{getUnicodeFlagIcon('BR')}</MenuItem>
         <MenuItem value={'zh-Hant'}>{getUnicodeFlagIcon('HK')}</MenuItem>
+        <MenuItem value={'es-ES'}>{getUnicodeFlagIcon('ES')}</MenuItem>
+        <MenuItem value={'fr-FR'}>{getUnicodeFlagIcon('FR')}</MenuItem>
       </Select>
     </FormControl>
   );
