@@ -14,6 +14,9 @@ import { isModerator } from '../../../utils/isModerator';
 import { AlertDialog } from '../../../components/AlertDialog/AlertDialog'
 import './GameController.css';
 
+import { TConductorInstance } from "react-canvas-confetti/dist/types";
+import Realistic from "react-canvas-confetti/dist/presets/realistic";
+
 interface GameControllerProps {
   game: Game;
   currentPlayerId: string;
@@ -42,7 +45,18 @@ export const GameController: React.FC<GameControllerProps> = ({ game, currentPla
     window.location.href = '/';
   }
 
+  const [conductor, setConductor] = useState<TConductorInstance>();
+
+  const onOnce = () => {
+    conductor?.shoot();
+  };
+
+  const onInit = ({ conductor }: { conductor: TConductorInstance }) => {
+    setConductor(conductor);
+  };
+
   return (
+    <>
     <Grow in={true} timeout={2000}>
       <div className='GameController'>
         <Card variant='outlined' className='GameControllerCard'>
@@ -70,7 +84,9 @@ export const GameController: React.FC<GameControllerProps> = ({ game, currentPla
               <>
                 <div className='GameControllerButtonContainer'>
                   <div className='GameControllerButton'>
-                    <IconButton onClick={() => finishGame(game.id)} data-testid='reveal-button' color='primary'>
+                    <IconButton onClick={() => {
+                      finishGame(game.id); onOnce()}}
+                      data-testid='reveal-button' color='primary'>
                       <VisibilityIcon fontSize='large' style={{ color: green[500] }} />
                     </IconButton>
                   </div>
@@ -131,5 +147,7 @@ export const GameController: React.FC<GameControllerProps> = ({ game, currentPla
         </Snackbar>
       </div>
     </Grow>
+    <Realistic onInit={onInit} />
+    </>
   );
 };

@@ -9,7 +9,7 @@ import JoinPage from './pages/JoinPage/JoinPage';
 import { theme } from './service/theme';
 
 function App() {
-  return (
+    return (
     <div className='LightTheme'>
       <ThemeProvider theme={theme}>
         <StylesProvider injectFirst>

@@ -6,7 +6,6 @@ import { Player } from '../../../types/player';
 import { Status } from '../../../types/status';
 import { CardConfig, getCards, getRandomEmoji } from './CardConfigs';
 import './CardPicker.css';
-import Confetti from 'react-confetti';
 
 interface CardPickerProps {
   game: Game;
@@ -81,7 +80,6 @@ export const CardPicker: React.FC<CardPickerProps> = ({ game, players, currentPl
             ? 'Pick your card!'
             : 'Estimation completed! Waiting for moderator to start a new voting...'}
         </Typography>
-        {game.gameStatus === Status.Finished && (<Confetti recycle={false}/>)}
       </div>
     </Grow>
   );
