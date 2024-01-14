@@ -11,7 +11,7 @@ import { useHistory } from 'react-router-dom';
 import './Toolbar.css';
 import { useTranslation } from 'react-i18next';
 import { LanguageControl } from '../LanguageControl/LanguageControl';
-export const title = 'Planning Poker';
+export const title = 'Agile Scrum';
 
 export const Toolbar = () => {
   const history = useHistory();
