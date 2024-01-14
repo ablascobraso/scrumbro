@@ -33,7 +33,7 @@ describe('Toolbar component', () => {
   });
   it('should render correct title', () => {
     render(<Toolbar />);
-    const title = screen.getByText('Agile Scrum');
+    const title = screen.getByText('Planning Poker');
     expect(title).toBeInTheDocument();
   });
   it('should render Create new session button', () => {
@@ -60,7 +60,7 @@ describe('Toolbar component', () => {
   });
   it('should navigate to home page when Title is clicked clicked', () => {
     render(<Toolbar />);
-    const title = screen.getByText('Agile Scrum');
+    const title = screen.getByText('Planning Poker');
     userEvent.click(title);
     expect(mockHistoryPush).toBeCalledWith('/');
   });
