@@ -10,10 +10,14 @@
       "title": "Scrum Poker",
       "description": "Planning Poker dédié à l'estimation de user stories des équipes agiles/scrum. Créez una nouvelle session et invitez vos collègues pour commencer l'estimation.",
       "formNewSession": {
-        "newSessionHeader": "Créer une nouvelle session",
+        "newSessionHeader": "Créer un nouveau Planning Poker",
         "sessionNameLabel": "Nom de la session",
         "yourNameLabel": "Votre nom"
       }
-    }
+    },
+    "recentSessionsContainer" : "Voici vos sessions Planning Poker récentes, cliquez sur le nom de la session pour la rejoindre à nouveau."
+  },
+  "RecentGames": {
+    "title": "Sessions récentes"
   }
 }

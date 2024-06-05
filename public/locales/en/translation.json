@@ -7,13 +7,17 @@
   },
   "HomePage": {
     "heroSection": {
-      "title": "Scrum Poker",
+      "title": "Planning Poker",
       "description": "Planning Poker Web App to estimate user stories for your Agile/Scrum teams. Create a session and invite your team members to estimate user stories efficiently.",
       "formNewSession": {
-        "newSessionHeader": "Create new session",
+        "newSessionHeader": "Create new Planning Poker",
         "sessionNameLabel": "Session name",
         "yourNameLabel": "Your name"
       }
-    }
+    },
+    "recentSessionsContainer" : "Here are your recent Planning Poker sessions, click on the session name to join the session again."
+  },
+  "RecentGames": {
+    "title": "Recent Sessions"
   }
 }

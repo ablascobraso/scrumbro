@@ -20,11 +20,13 @@ import { removeGame } from '../../../service/games';
 import { isModerator } from '../../../utils/isModerator';
 import { AlertDialog } from '../../../components/AlertDialog/AlertDialog';
 import { PlayerGame } from '../../../types/player';
+import { useTranslation } from 'react-i18next';
 
 export const RecentGames = () => {
   const history = useHistory();
   const [recentGames, setRecentGames] = useState<PlayerGame[] | undefined>(undefined);
   const [reloadRecent, setReloadRecent] = useState<Boolean>(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     let fetchCleanup = true;
@@ -62,7 +64,7 @@ export const RecentGames = () => {
     <Card variant='outlined' className='RecentGamesCard'>
       <CardHeader
         className='RecentGamesCardTitle'
-        title='Recent Session'
+        title={t('RecentGames.title')}
         titleTypographyProps={{ variant: 'h6', noWrap: true }}
       />
       <CardContent className='RecentGamesCardContent'>

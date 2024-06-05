@@ -2,18 +2,22 @@
   "toolbar": {
     "menu": {
       "newSession": "Nueva sessión",
-      "joinSession": "Acceder a sessión existente"
+      "joinSession": "Acceder a sesión existente"
     }
   },
   "HomePage": {
     "heroSection": {
       "title": "Scrum Poker",
-      "description": "Sistema de Planning Poker para la estimación de user stories en equipos ágiles/scrum. Crea una nueva sessión e invite miembros de su equipo para empezar la estimación.",
+      "description": "Sistema de Planning Poker para la estimación de user stories en equipos ágiles/scrum. Crea una nueva sesión e invita a miembros de su equipo para empezar la estimación.",
       "formNewSession": {
-        "newSessionHeader": "Crear una nueva sessión",
+        "newSessionHeader": "Crear un nuevo Planning Poker",
         "sessionNameLabel": "Nombre de la sessión",
-        "yourNameLabel": "Introduce tu nombre"
+        "yourNameLabel": "Tu nombre"
       }
-    }
+    },
+    "recentSessionsContainer" : "Aquí están tus sesiones recientes de Planning Poker, haz clic en el nombre de la sesión para acceder a ella de nuevo."
+  },
+  "RecentGames": {
+      "title": "Sesiones recientes"
   }
 }

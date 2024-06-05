@@ -10,10 +10,14 @@
       "title": "Scrum Poker",
       "description": "Sistema de Planning Poker para estimativa de histórias dos usuários para seu time ágil/scrum. Crie uma sessão e convide membros do seu time para estimar as histórias com eficiência.",
       "formNewSession": {
-        "newSessionHeader": "Criar nova sessão",
+        "newSessionHeader": "Criar nova sessão Planning Poker",
         "sessionNameLabel": "Nome da sessão",
         "yourNameLabel": "Seu nome"
       }
-    }
+    },
+    "recentSessionsContainer" : "Aqui estão as suas sessões recentes de Planning Poker, clique no nome da sessão para entrar novamente."
+  },
+  "RecentGames": {
+    "title": "Sessões recentes"
   }
 }

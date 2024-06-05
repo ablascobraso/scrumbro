@@ -24,7 +24,7 @@ describe('Footer component', () => {
   });
   it('should render copyright', () => {
     render(<Footer />);
-    const element = screen.getByText('Scrum Poker');
+    const element = screen.getByText('Agile Scrum');
     expect(element).toBeInTheDocument();
   });
   it('should render Product', () => {

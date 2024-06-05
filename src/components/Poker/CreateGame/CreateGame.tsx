@@ -29,8 +29,8 @@ const userNameConfig: Config = {
 
 export const CreateGame = () => {
   const history = useHistory();
-  const [gameName, setGameName] = useState(uniqueNamesGenerator(gameNameConfig));
-  const [createdBy, setCreatedBy] = useState(uniqueNamesGenerator(userNameConfig));
+  const [gameName, setGameName] = useState('');
+  const [createdBy, setCreatedBy] = useState('');
   const [gameType, setGameType] = useState(GameType.Fibonacci);
   const [hasDefaults, setHasDefaults] = useState({ game: true, name: true });
   const [loading, setLoading] = useState(false);

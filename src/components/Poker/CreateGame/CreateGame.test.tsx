@@ -4,6 +4,7 @@ import { uniqueNamesGenerator } from 'unique-names-generator';
 import React from 'react';
 import { CreateGame } from './CreateGame';
 import * as gamesService from '../../../service/games';
+import { useTranslation } from 'react-i18next';
 
 jest.mock('../../../service/games');
 jest.mock('react-router-dom', () => ({
@@ -34,14 +35,14 @@ describe('CreateGame component', () => {
   });
   
   it('should have default values in the input fields', () => {
-    (uniqueNamesGenerator as jest.Mock).mockReturnValueOnce('sesh name');
-    (uniqueNamesGenerator as jest.Mock).mockReturnValueOnce('user name');
+    (uniqueNamesGenerator as jest.Mock).mockReturnValueOnce('');
+    (uniqueNamesGenerator as jest.Mock).mockReturnValueOnce('');
     render(<CreateGame />);
     const sessionName = screen.getByPlaceholderText('Enter a session name');
     const userName = screen.getByPlaceholderText('Enter your name');
 
-    expect(sessionName).toHaveValue('sesh name');
-    expect(userName).toHaveValue('user name');
+    expect(sessionName).toHaveValue('');
+    expect(userName).toHaveValue('');
   });
 
   it('should empty inputs when clicked', () => {

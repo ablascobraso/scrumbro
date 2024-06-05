@@ -13,7 +13,7 @@ export const Footer = () => {
             <div className='FooterItemContainer'>
               <CopyrightIcon color='secondary' fontSize='small' />
               <Typography color='textSecondary' variant='body2'>
-                Scrum Poker
+                Agile Scrum
               </Typography>
             </div>
 
