@@ -1,3 +1,9 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .HomePageContainer {
   padding: 25px;
   display: flex;
@@ -6,9 +12,19 @@
   justify-content: center;
 }
 
+.HomePageGrid {
+  min-height: 100vh; /* Ensure the grid container takes up full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.HomePageContent {
+  flex: 1; /* This allows the content to expand and take up available space */
+}
+
 .SessionImage {
   margin-top: -10px;
-  height: 'auto';
+  height: auto;
   width: 600px;
   transform: none;
 }
