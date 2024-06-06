@@ -19,6 +19,8 @@ const gamesCollectionName = 'games';
 const playersCollectionName = 'players';
 const db = firebase.firestore();
 
+export { db };
+
 export const addGameToStore = async (gameId: string, data: any) => {
   await db.collection(gamesCollectionName).doc(gameId).set(data);
   return true;

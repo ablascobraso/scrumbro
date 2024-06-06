@@ -14,6 +14,8 @@ import { NewGame } from '../types/game';
 import { Player } from '../types/player';
 import { Status } from '../types/status';
 import { removeGameFromCache, resetPlayers, updatePlayerGames } from './players';
+import { db } from '../repository/firebase';
+import { TimerState } from '../types/timer';
 
 export const addNewGame = async (newGame: NewGame): Promise<string> => {
   const player = {
@@ -127,4 +129,37 @@ export const removeGame = async (gameId: string) => {
 
 export const deleteOldGames = async () => {
   await removeOldGameFromStore();
+};
+
+export const updateTimerState = (gameId: string, timerState: TimerState) => {
+  return db.collection('games').doc(gameId).set(
+    {
+      timerState,
+    },
+    { merge: true }
+  );
+};
+
+export const initializeTimerState = (gameId: string) => {
+  const initialTimerState: TimerState = {
+    isRunning: false,
+    endTime: "",
+  };
+  return db.collection('games').doc(gameId).set(
+    {
+      timerState: initialTimerState,
+    },
+    { merge: true }
+  );
+};
+
+export const subscribeToTimerState = (gameId: string, callback: (timerState: TimerState) => void) => {
+  return db.collection('games').doc(gameId).onSnapshot((doc) => {
+    const data = doc.data();
+    if (data && data.timerState) {
+      callback(data.timerState as TimerState);
+    } else {
+      console.warn("Timer state is not defined in the document");
+    }
+  });
 };

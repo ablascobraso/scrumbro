@@ -1,4 +1,5 @@
 import { Status } from './status';
+import { TimerState } from './timer';
 
 export interface Game {
   id: string;
@@ -10,6 +11,7 @@ export interface Game {
   createdById: string;
   createdAt: Date;
   updatedAt?: Date;
+  timerState?: TimerState; // Add the timerState field
 }
 
 export interface NewGame {

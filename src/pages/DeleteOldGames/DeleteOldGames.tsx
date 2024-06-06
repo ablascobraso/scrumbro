@@ -16,8 +16,8 @@ export const DeleteOldGames = () => {
 
   return (
     <>
-      <Grid container direction='column' justify='center' alignItems='center' spacing={2}>
-        <Grid container item sm={12} lg={11} justify='center' alignItems='center' spacing={3}>
+      <Grid container direction='column' justifyContent='center' alignItems='center' spacing={2}>
+        <Grid container item sm={12} lg={11} justifyContent='center' alignItems='center' spacing={3}>
           <Grid item sm={12} lg={6}>
             {isDeleteInProgress ? <div>Deleting old games.....</div> : <div>Delete done!</div>}
           </Grid>
