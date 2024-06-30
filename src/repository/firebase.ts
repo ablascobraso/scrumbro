@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import { Game } from '../types/game';
 import { Player } from '../types/player';
+import { TimerState } from '../types/timer';
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FB_API_KEY,
   authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
@@ -13,13 +14,10 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const gamesCollectionName = 'games';
 const playersCollectionName = 'players';
 const db = firebase.firestore();
-
-export { db };
 
 export const addGameToStore = async (gameId: string, data: any) => {
   await db.collection(gamesCollectionName).doc(gameId).set(data);
@@ -134,4 +132,40 @@ export const removeOldGameFromStore = async () => {
   }
 
   return true;
+};
+
+
+export const updateTimerStateFromStore = (gameId: string, timerState: TimerState) => {
+  return db.collection('games').doc(gameId).set(
+    {
+      timerState,
+    },
+    { merge: true }
+  );
+};
+
+
+export const initializeTimerStateFromStore = (gameId: string) => {
+  const initialTimerState: TimerState = {
+    isRunning: false,
+    endTime: "",
+  };
+  return db.collection('games').doc(gameId).set(
+    {
+      timerState: initialTimerState,
+    },
+    { merge: true }
+  );
+};
+
+
+export const subscribeToTimerStateFromStore = (gameId: string, callback: (timerState: TimerState) => void) => {
+  return db.collection('games').doc(gameId).onSnapshot((doc) => {
+    const data = doc.data();
+    if (data && data.timerState) {
+      callback(data.timerState as TimerState);
+    } else {
+      console.warn("Timer state is not defined in the document");
+    }
+  });
 };

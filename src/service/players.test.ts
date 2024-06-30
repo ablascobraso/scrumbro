@@ -48,6 +48,10 @@ describe('Players service', () => {
     createdBy: 'Creatornado',
     createdById: '123-abc',
     createdAt: new Date(),
+    timerState: {
+      endTime: '2024-06-10T18:22:01.476Z',
+      isRunning: false,
+    },
   };
 
   beforeEach(() => {

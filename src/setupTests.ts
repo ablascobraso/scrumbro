@@ -8,3 +8,12 @@ import '@testing-library/jest-dom';
 jest.mock('react-i18next', () => ({
   useTranslation: () => ({ t: jest.fn(), i18n: { language: 'en-US', changeLanguage: jest.fn() } }),
 }));
+
+// Global teardown logic
+afterAll(async () => {
+  // Add any cleanup logic here, if needed
+  // For example:
+  // await new Promise(resolve => setTimeout(() => resolve(), 1000)); // wait for 1 second
+
+  jest.clearAllTimers(); // Clear any leftover timers
+});

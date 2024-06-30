@@ -43,6 +43,10 @@ describe('games service', () => {
     createdById: 'beanstalk',
     createdAt: new Date(Date.now() - 60000),
     updatedAt: new Date(),
+    timerState: {
+      endTime: '2024-06-10T18:22:01.476Z',
+      isRunning: true,
+    },
   };
   const mockPlayers = [
     { name: 'Jack', id: 'beanstalk', status: Status.Finished, value: 4, emoji: 'smirk' },
