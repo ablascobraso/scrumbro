@@ -14,12 +14,17 @@ describe('Players component', () => {
     average: 0,
     createdById: 'abc',
     gameStatus: Status.InProgress,
+    timerState: {
+      endTime: '2024-06-10T18:22:01.476Z',
+      isRunning: true,
+    },
   };
   const mockPlayers: Player[] = [
     { id: 'a1', name: 'SpiderMan', status: Status.InProgress, value: 0 },
     { id: 'a2', name: 'IronMan', status: Status.Finished, value: 3 },
   ];
   const mockCurrentPlayerId = mockPlayers[0].id;
+
   it('should display all players', () => {
     render(<Players game={mockGame} players={mockPlayers} currentPlayerId={mockCurrentPlayerId} />);
 

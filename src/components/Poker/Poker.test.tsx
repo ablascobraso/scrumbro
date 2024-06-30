@@ -9,7 +9,7 @@ import { Status } from '../../types/status';
 import { Poker } from './Poker';
 
 jest.mock('../../service/players');
-// jest.mock('../../service/games');
+jest.mock('../../service/games');
 const mockHistoryPush = jest.fn();
 
 describe('Poker component', () => {

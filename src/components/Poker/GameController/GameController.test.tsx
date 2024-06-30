@@ -7,6 +7,7 @@ import * as gamesService from '../../../service/games';
 import userEvent from '@testing-library/user-event';
 
 jest.mock('../../../service/games');
+jest.mock('react-canvas-confetti/dist/presets/realistic', () => () => <div data-testid="confetti-mock" />);
 const mockHistoryPush = jest.fn();
 
 jest.mock('react-router-dom', () => ({
@@ -15,6 +16,7 @@ jest.mock('react-router-dom', () => ({
   }),
 }));
 document.execCommand = jest.fn();
+
 describe('GameController component', () => {
   const mockGame: Game = {
     id: 'xyz',
@@ -24,6 +26,10 @@ describe('GameController component', () => {
     average: 0,
     createdById: 'abc',
     gameStatus: Status.InProgress,
+    timerState: {
+      endTime: '2024-06-10T18:22:01.476Z',
+      isRunning: true,
+    },
   };
   const mockCurrentPlayerId = 'abc';
 

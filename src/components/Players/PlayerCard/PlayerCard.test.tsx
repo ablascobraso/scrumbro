@@ -15,6 +15,10 @@ describe('PlayerCard component', () => {
     average: 0,
     createdById: 'abc',
     gameStatus: Status.InProgress,
+    timerState: {
+      endTime: '2024-06-10T18:22:01.476Z',
+      isRunning: true,
+    },
   };
   const mockPlayer: Player = { id: 'a1', name: 'SpiderMan', status: Status.InProgress, value: 0 };
   let mockCurrentPlayerId = mockPlayer.id;

@@ -33,10 +33,21 @@ export const CountdownTimerDisplay: React.FC<CountdownTimerDisplayProps> = ({ ga
     if (remainingTime === 0) {
       setShowPopup(true);
       const bellSound = new Audio('/sounds/bell.mp3');
-      bellSound.play(); // Play the bell sound
+      bellSound.play().catch(error => {
+        console.log('Audio play failed:', error);
+      }); // Play the bell sound
       setTimeout(() => setShowPopup(false), 3000); // Hide popup after 3 seconds
     }
   }, [remainingTime]);
+
+
+  const formatTime = (seconds: number): string => {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = Math.floor(seconds % 60);
+    return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+  };
+
 
   return (
     <div className='CountdownTimerDisplay'>
@@ -52,7 +63,7 @@ export const CountdownTimerDisplay: React.FC<CountdownTimerDisplayProps> = ({ ga
       >
         {({ remainingTime }) => (
           <Typography variant='caption'>
-            {remainingTime}
+            {formatTime(remainingTime)}
           </Typography>
         )}
       </CountdownCircleTimer>

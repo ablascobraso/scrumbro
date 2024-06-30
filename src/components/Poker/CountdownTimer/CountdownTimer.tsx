@@ -72,7 +72,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ gameId, createdB
   };
 
   return (
-    <div className='CountdownTimer'>
+    <div className='CountdownTimer' data-testid="CountdownTimer">
       {moderator && (
         <>
           <CountdownTimerButton
