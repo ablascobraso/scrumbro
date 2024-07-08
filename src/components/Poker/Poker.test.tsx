@@ -16,6 +16,9 @@ describe('Poker component', () => {
   beforeEach(() => {
     jest.spyOn(reactRouter, 'useHistory').mockReturnValue({ push: mockHistoryPush } as any);
     jest.spyOn(reactRouter, 'useParams').mockReturnValue({ Id: 'zz' } as any);
+    jest.spyOn(gamesService, 'subscribeToTimerState').mockImplementation(() => {
+      return jest.fn();
+    });
   });
   it('should display game not found', async () => {
     jest.spyOn(gamesService, 'streamGame').mockImplementation(() => {
