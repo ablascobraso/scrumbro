@@ -55,8 +55,8 @@ export const CountdownTimerDisplay: React.FC<CountdownTimerDisplayProps> = ({ ga
         key={timerKey}
         isPlaying={isPlaying}
         duration={initialDuration}
-        size={60}
-        strokeWidth={6}
+        size={65}
+        strokeWidth={7}
         colors={['#004777', '#F7B801', '#A30000', '#A30000']}
         colorsTime={[7, 5, 2, 0]}
         onComplete={() => setRemainingTime(0)}
