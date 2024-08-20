@@ -21,7 +21,7 @@ export const CountdownTimerDisplay: React.FC<CountdownTimerDisplayProps> = ({ ga
       if (timerState.isRunning) {
         const endTime = new Date(timerState.endTime).getTime();
         const now = new Date().getTime();
-        const timeDiff = Math.max(0, (endTime - now) / 1000); // Convert milliseconds to seconds
+        const timeDiff = Math.max(0, (endTime - now) / 1000);
         setRemainingTime(timeDiff);
       }
     });
