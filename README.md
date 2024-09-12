@@ -5,24 +5,12 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 
 <div align="center">
   
-[![Build and Tests](https://github.com/hellomuthu23/planning-poker/actions/workflows/build-and-tests.yml/badge.svg)](https://github.com/hellomuthu23/planning-poker/actions/workflows/build-and-tests.yml)
-[![Deploy to Firebase](https://github.com/hellomuthu23/planning-poker/actions/workflows/deploy-to-firebase-on-master.yml/badge.svg)](https://github.com/hellomuthu23/planning-poker/actions/workflows/deploy-to-firebase-on-master.yml)
+[![Build and Tests]](https://github.com/ablascobraso/scrumbro/actions)
+[![Deploy to Firebase]](https://github.com/ablascobraso/scrumbro/actions)
 
 </div>
 
-## Live Site
-
-- <https://planning-poker-agile.web.app/>
-
-## Home Page
-
-<img src="docs/HomePage.jpg"  />
-
-## Active Session
-
-<img src="docs/ActiveSession.jpg"  />
-
-## Features
+## Existing Features
 
 1. Create new Session(Fibonacci or TShirt size)
 2. Join Session
@@ -32,6 +20,7 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 6. Voting status - Users Cards show voting status using emojis - 👍 - Voting Done, 🤔 - Yet to Vote
 7. Remove user from session
 8. Delete Session - Moderator can delete the session completely.
+9. Timer
 
 ## Tech Stack
 
@@ -45,7 +34,7 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 1. Clone the repo
 
     ```bash
-    git clone https://github.com/hellomuthu23/planning-poker.git
+    git clone https://github.com/ablascobraso/scrumbro.git
     ```
 
 2. Run `yarn` command to install the required npm package.
@@ -53,28 +42,31 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 4. Access the app at `http://localhost:3000`.
 5. We use the same production database for local development too, so avoid creating too many new sessions and re-use existing one.
 
-## Development Guidelines
-
-1. Keep it simple as much as possible
-2. Add required unit tests
-3. Use strong type always
-4. Use functional and hooks based approach for components
-5. Avoid adding new colors
-6. Use css until we have scss in place
-7. Don't duplicate code and use service folder to keep non-component/shared codes
-
 ## Pending features open to development
 
-1. Add timer
+1. Add moderator checkbox, to grant moderator privileges to normal users.
 2. Export options
 3. Preserve history of voting and show it in session
-4. Provide option to enter user story name
-5. Make the default Session name random
+4. Provide option to enter user story name (list of issues estimated and to be estimated)
+5. Fix bug when timer is 0 and you invite a new player
+6. Confetti animation is only appearing for moderator
+7. Add login page SSO
+8. Add flag to languages selector
+9. Rename it to scrum agile (I think it is a better name than scrumbro)
+10. Complete footer
+11. Improve UI design
+12. Currently, this project can also be installed as a desktop application, is this a necessary feature?
+13. Add dark theme
+
 
 ## Tech Depts
 
 1. Add Semantic Release to generate changelog and release notes
 2. Add missing unit tests for services
 3. Upgrade Material UI to latest version
+4. Add Stripe or useful google firebase extensions
+5. Fix security issues raised by GitHub
+6. Update firebase rules, now it is just allowing any write
+
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/scrumbro)
