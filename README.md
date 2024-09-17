@@ -1,9 +1,9 @@
 
-<h1 align="center">Planning Poker App</h1>
+# Planning Poker App
 
 Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum teams. Create session and invite team members to estimate user stories efficiently. Intuitive UI/UX for voting the story points, showing team members voting status with emojis(👍 - Voting Done, 🤔 - Yet to Vote). Session Moderator has full control on revealing story points and restarting the session.
 
-<div align="center">
+## Pipeline (Github actions to be implemented)
   
 [![Build and Tests]](https://github.com/ablascobraso/scrumbro/actions)
 [![Deploy to Firebase]](https://github.com/ablascobraso/scrumbro/actions)
@@ -21,6 +21,7 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 7. Remove user from session
 8. Delete Session - Moderator can delete the session completely.
 9. Timer
+10. Flags and languages selector
 
 ## Tech Stack
 
@@ -51,13 +52,11 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 5. Fix bug when timer is 0 and you invite a new player
 6. Confetti animation is only appearing for moderator
 7. Add login page SSO
-8. Add flag to languages selector
-9. Rename it to scrum agile (I think it is a better name than scrumbro)
-10. Complete footer
-11. Improve UI design
-12. Currently, this project can also be installed as a desktop application, is this a necessary feature?
-13. Add dark theme
-
+8. Rename it to scrum agile (I think it is a better name than scrumbro)
+9. Complete footer
+10. Improve UI design
+11. Currently, this project can also be installed as a desktop application, is this a necessary feature?
+12. Add dark theme
 
 ## Tech Depts
 
@@ -67,6 +66,5 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 4. Add Stripe or useful google firebase extensions
 5. Fix security issues raised by GitHub
 6. Update firebase rules, now it is just allowing any write
-
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/scrumbro)
