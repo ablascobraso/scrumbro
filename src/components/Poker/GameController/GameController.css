@@ -44,7 +44,7 @@
   background-color:  var(--color-background);
 }
 .GameControllerButton:hover {
-  box-shadow: rgb(171 207 248) 0px 0px 0px 6px;
+  box-shadow: rgba(0, 51, 102, 0.9) 0px 0px 0px 3px;
 }
 
 .GameControllerCardHeaderAverageContainer {
@@ -64,5 +64,5 @@
 
 .MuiCardHeader-action {
   margin: 0;
-  padding-right: 0px;
+  padding-right: 5px;
 }
