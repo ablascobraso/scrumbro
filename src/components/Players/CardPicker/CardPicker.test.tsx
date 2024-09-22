@@ -127,7 +127,7 @@ describe('CardPicker component', () => {
       gameStatus: Status.Finished,
     };
     render(<CardPicker game={finishedGameMock} players={mockPlayers} currentPlayerId={currentPlayerId} />);
-    const helperText = screen.getByText('Estimation completed! Waiting for moderator to start a new voting...');
+    const helperText = screen.getByText('Estimation completed. Waiting for moderator to start a new voting...');
 
     expect(helperText).toBeInTheDocument();
   });

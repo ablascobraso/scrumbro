@@ -55,7 +55,7 @@ export const GameController: React.FC<GameControllerProps> = ({ game, currentPla
     window.location.href = '/';
   };
 
-  const onOnce = () => {
+  const shootConfetti = () => {
     conductor?.shoot();
   };
 
@@ -95,7 +95,7 @@ export const GameController: React.FC<GameControllerProps> = ({ game, currentPla
                       <IconButton
                         onClick={() => {
                           finishGame(game.id);
-                          onOnce();
+                          shootConfetti();
                         }}
                         data-testid='reveal-button'
                         color='primary'

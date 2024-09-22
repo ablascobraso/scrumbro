@@ -31,13 +31,13 @@ describe('PlayerCard component', () => {
   it('should display thinking emoji when Player has not voted', () => {
     render(<PlayerCard game={mockGame} player={mockPlayer} currentPlayerId={mockCurrentPlayerId} />);
 
-    expect(screen.getByText('🤔')).toBeInTheDocument();
+    expect(screen.getByText('👀')).toBeInTheDocument();
   });
   it('should display thumbs up emoji when Player has voted', () => {
     const votedPlayer = { ...mockPlayer, status: Status.Finished };
     render(<PlayerCard game={mockGame} player={votedPlayer} currentPlayerId={mockCurrentPlayerId} />);
 
-    expect(screen.getByText('👍')).toBeInTheDocument();
+    expect(screen.getByText('💙')).toBeInTheDocument();
   });
 
   it('should display coffee up emoji when Player has voted but value is -1 and Game is finished', () => {
@@ -60,7 +60,7 @@ describe('PlayerCard component', () => {
     const finishedGame = { ...mockGame, gameStatus: Status.Finished };
     render(<PlayerCard game={finishedGame} player={coffeePlayer} currentPlayerId={mockCurrentPlayerId} />);
 
-    expect(screen.getByText('🤔')).toBeInTheDocument();
+    expect(screen.getByText('👀')).toBeInTheDocument();
   });
   it('should display remove icon for moderator', () => {
     const coffeePlayer = { ...mockPlayer, status: Status.InProgress };

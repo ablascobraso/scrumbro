@@ -42,6 +42,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ game, player, currentPla
               onClick={() => removeUser(game.id, player.id)}
               data-testid='remove-button'
               color='primary'
+              style={{ float: 'right' }}
             >
               <DeleteForeverIcon fontSize='small' style={{ color: red[300] }} />
             </IconButton>
@@ -49,7 +50,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ game, player, currentPla
         }
       />
       <CardContent className='PlayerCardContent'>
-        <Typography variant='h2' className='PlayerCardContentMiddle'>
+        <Typography variant='h3' className='PlayerCardContentMiddle'>
           {getCardValue(player, game)}
         </Typography>
       </CardContent>
@@ -59,7 +60,7 @@ export const PlayerCard: React.FC<PlayerCardProps> = ({ game, player, currentPla
 
 const getCardColor = (game: Game, value: number | undefined): string => {
   if (game.gameStatus !== Status.Finished) {
-    return 'var(--color-background-secondary)';
+    return '#9EC8FE';
   }
   const card = getCards(game.gameType).find((card) => card.value === value);
   return card ? card.color : 'var(--color-background-secondary)';
@@ -67,17 +68,16 @@ const getCardColor = (game: Game, value: number | undefined): string => {
 
 const getCardValue = (player: Player, game: Game) => {
   if (game.gameStatus !== Status.Finished) {
-    return player.status === Status.Finished ? '👍' : '🤔';
+    return player.status === Status.Finished ? '💙' : '👀';
   }
-
   if (game.gameStatus === Status.Finished) {
     if (player.status === Status.Finished) {
       if (player.value && player.value === -1) {
-        return player.emoji || '☕'; // coffee emoji
+        return player.emoji || '☕';
       }
       return getCardDisplayValue(game.gameType, player.value);
     }
-    return '🤔';
+    return '👀';
   }
 };
 

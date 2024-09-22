@@ -29,11 +29,16 @@ export const CardPicker: React.FC<CardPickerProps> = ({ game, players, currentPl
   return (
     <Grow in={true} timeout={1000}>
       <div>
+        <Typography variant='h6'>
+            {game.gameStatus !== Status.Finished
+              ? 'Pick your card!'
+              : 'Estimation completed. Waiting for moderator to start a new voting...'}
+        </Typography>
         <div className='CardPickerContainer'>
           <Grid container spacing={4} justifyContent='center'>
             {cards.map((card: CardConfig, index) => (
               <Grid key={card.value} item xs>
-                <Slide in={true} direction={'right'} timeout={(1000 * index) / 2}>
+                <Slide in={true} direction={'down'} timeout={(1000 * index) / 2}>
                   <Card
                     id={`card-${card.displayValue}`}
                     className='CardPicker'
@@ -75,11 +80,6 @@ export const CardPicker: React.FC<CardPickerProps> = ({ game, players, currentPl
             ))}
           </Grid>
         </div>
-        <Typography variant='h6'>
-          {game.gameStatus !== Status.Finished
-            ? 'Pick your card!'
-            : 'Estimation completed! Waiting for moderator to start a new voting...'}
-        </Typography>
       </div>
     </Grow>
   );
@@ -92,8 +92,8 @@ const getCardStyle = (players: Player[], playerId: string, card: CardConfig) => 
       marginTop: '-15px',
       zIndex: 5,
       backgroundColor: card.color,
-      border: '2px dashed black',
-      boxShadow: '0 0px 12px 0 grey',
+      border: '3.5px solid rgba(0, 51, 102, 0.9)',
+      boxShadow: '0 0px 20px 0 grey',
     };
   }
   return { backgroundColor: card.color };

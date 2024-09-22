@@ -16,14 +16,14 @@ interface CountdownTimerProps {
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({ gameId, createdById, currentPlayerId }) => {
   const [timerKey, setTimerKey] = useState(0);
   const [isTimerPlaying, setIsTimerPlaying] = useState(false);
-  const [remainingTime, setRemainingTime] = useState(60); // Default 60 seconds
-  const [initialDuration, setInitialDuration] = useState(60); // Default 1 minute
+  const [remainingTime, setRemainingTime] = useState(60); 
+  const [initialDuration, setInitialDuration] = useState(60);
   const [showTimeInput, setShowTimeInput] = useState(false);
-  const [customTime, setCustomTime] = useState<string>('1'); // Default 1 minute
+  const [customTime, setCustomTime] = useState<string>('1');
   const moderator = isModerator(createdById, currentPlayerId);
 
   useEffect(() => {
-    initializeTimerState(gameId); // Initialize the timer state for the specific game
+    initializeTimerState(gameId);
 
     const unsubscribe = subscribeToTimerState(gameId, (timerState: TimerState) => {
       if (timerState.isRunning) {
@@ -91,7 +91,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ gameId, createdB
                 onChange={handleTimeInputChange}
                 size="small"
                 inputProps={{ maxLength: 3 }}
-                style={{ width: '180px' }} // Increase the width
+                style={{ width: '180px' }}
               />
               <Button
                 variant="contained"
@@ -107,7 +107,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ gameId, createdB
         </>
       )}
       <CountdownTimerDisplay
-        gameId={gameId} // Pass the gameId to the CountdownTimerDisplay
+        gameId={gameId}
         initialDuration={initialDuration}
         timerKey={timerKey}
         isPlaying={isTimerPlaying}

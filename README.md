@@ -17,7 +17,7 @@ Agile/Scrum Planning Poker Web App to estimate user stories for the Agile/Scrum 
 3. Invite Link
 4. Session controller - Moderator can Reveal and restart the session anytime.
 5. Reveal - Reveal the cards for all users
-6. Voting status - Users Cards show voting status using emojis - 👍 - Voting Done, 🤔 - Yet to Vote
+6. Voting status - Users Cards show voting status using emojis - 💙 - Voting Done, 👀 - Yet to Vote
 7. Remove user from session
 8. Delete Session - Moderator can delete the session completely.
 9. Timer
